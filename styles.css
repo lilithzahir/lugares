@@ -1,0 +1,596 @@
+@font-face {
+    font-family: 'alternativa-lorimer_n2';
+    font-style: normal;
+    src: url(AkzeleratCondensed-Normal.ttf);
+}
+
+
+
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    transition: 0.5s;
+    background: rgb(212,243,227);
+}
+body.night
+{
+    background: #00151f;
+}
+
+
+
+
+
+/*--------------> HEADER <--------------*/
+
+header {
+    display: flex;
+    position: relative;
+    background: black;
+    height: 400px;
+    width: 100%;
+}
+
+
+
+.container-header {
+    text-align: center;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.container-header h1 {
+    position: relative;
+    line-height: 1;
+    font-family: 'alternativa-lorimer_n2';
+    text-transform: uppercase;
+    font-size: 80px;
+    font-weight: 100;
+    color: white;
+    letter-spacing: 2px;
+    margin-top: 60px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.container-header p {
+    color: white;
+    font-size: 0.8em;
+}
+
+
+
+ul {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    margin-top: 40px;
+}
+
+ul li a {
+    color: white;
+    font-size: 12px;
+    padding-left: 10px;
+}
+
+ul li a:hover {
+    color: #00bcd4;
+}
+
+
+
+
+span {
+    position: relative;
+    top: 170px;
+}
+span img {
+    height: 20px;
+    background: black;
+    width: 20px;
+    padding: 20px;
+    border-radius: 50%;
+    position: relative;
+}
+
+
+
+
+
+/*--------------> INTERRUPTOR <--------------*/
+
+.toggle {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    width: 55px;
+    height: 20px;
+    background: black;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 3px solid white;
+}
+
+.toggle.active {
+    background: black;
+    border: 3px solid #fff;
+}
+
+.toggle:before
+{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 17px;
+    height: 17px;
+    background: #fff;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.toggle.active:before
+{
+    left: 35px;
+    background: #fff;
+}
+
+
+
+
+
+/*-------------> GALERÍA <-------------*/
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin: 50px auto 0;
+    width: 920px;
+    min-height: 400px;
+    background: white;
+}
+
+.container .box {
+    position: relative;
+    display: inline-block;
+    width: 210px;
+    height: 210px;
+    background: #ff0;
+    margin: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    
+}
+
+.container .box .imgBox {
+    position: relative;
+}
+
+
+
+
+.container .box .imgBox img {
+    object-fit: cover; 
+    width: 210px; height: 210px;
+    transition: transform 2s;
+}
+
+.container .box:hover .imgBox img {
+    transform: scale(1.2);
+}
+
+
+
+
+.container .box .details {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    background: rgba(0,0,0,0.8);
+    transition: 0.5s;
+    transform: scaleY(0);
+    font-size: 1.2em;
+}
+.container .box:hover .details {
+    transform: scaleY(1);
+}
+
+.container .box .details .content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+}
+
+.container .box .details .content h2 {
+    margin: 0;
+    padding: 0;
+    color: #ff0;
+    font-size: 0.9em;
+}
+
+.container .box .details .content p {
+    font-size: 0.8em;
+    position: relative;
+    top: 12px;
+}
+
+
+
+
+button {
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 0.85em;
+    margin: 0 auto;
+    background: none;
+}
+
+
+
+
+
+/*--------------> TEXT INFO <--------------*/
+
+.texto-contenedor {
+    background: white;
+    margin: 50px auto 0;
+    width: 950px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.texto-contenedor h1 {
+    color: white;
+    margin-top: 40px;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    text-align: center;
+    padding: 10px;
+    background: linear-gradient(45deg,#89ff00,#00bcd4);
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 1.8em;
+}
+
+.texto p {
+    color: black;
+    font-size: 0.9em;
+    margin: 50px;
+    font-family: 'Roboto', cursive;
+    font-weight: 300;
+}
+
+
+
+
+.eres {
+    width: 800px;
+    margin: 0 auto;
+    border-left: 1px solid black;
+}
+
+.eres p {
+    margin: 20px;
+}
+
+
+
+.texto-contenedor button {
+    background: transparent;
+    position: relative;
+    left: 44%;
+    bottom: 30px;
+    border-radius: none;
+    font-size: 0.9em;
+}
+
+.texto-contenedor button img {
+    width: 40px;
+    height: 40px;
+}
+
+
+
+
+
+/*-------> SECCIÓN DE CANCIONES <-------*/
+
+.reproductor {
+    background: white;
+    margin: 50px auto 0;
+    width: 950px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 690px;
+}
+
+
+
+.reproductor .audio1 .img-audio {
+    height: 170px;
+    width: 170px;
+    border: 3px solid white;
+    position: relative;
+    left: 10px;
+    top: 10px;
+    border-radius: 5px;
+}
+.reproductor .audio2 .img-audio {
+    height: 170px;
+    width: 170px;
+    border: 3px solid white;
+    position: relative;
+    left: 10px;
+    top: 10px;
+    border-radius: 5px;
+}
+.reproductor .audio3 .img-audio {
+    height: 170px;
+    width: 170px;
+    border: 3px solid white;
+    position: relative;
+    left: 10px;
+    top: 10px;
+    border-radius: 5px;
+}
+
+
+
+
+audio {
+    padding: 10px;
+    width: 380px;
+    height: 38px;
+}
+
+.audio1 audio {
+    position: relative;
+    bottom: 230px;
+    left: 186px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 173px;
+    padding-right: 173px;
+}
+.audio2 audio {
+     position: relative;
+    bottom: 230px;
+    left: 186px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 173px;
+    padding-right: 173px;
+}
+.audio3 audio {
+     position: relative;
+    bottom: 230px;
+    left: 186px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 173px;
+    padding-right: 173px;
+}
+
+
+
+.audio1,
+.audio2,
+.audio3
+{
+    margin: 20px;
+    background: #ace0f9;
+    height: 200px;
+    width: 910px; 
+}
+
+
+
+
+.audio1 h3 {
+    position: relative;
+    bottom: 180px;
+    width: 725px;
+    left: 186px;
+    text-align: center;
+    font-family: 'Roboto', cursive;
+    font-size: 1.3em;
+    color: white;
+    text-shadow: 7px 0px 7px #00bcd4;
+}
+.audio2 h3 {
+    position: relative;
+    bottom: 180px;
+    width: 725px;
+    left: 186px;
+    text-align: center;
+    font-family: 'Roboto', cursive;
+    font-size: 1.3em;
+    color: white;
+    text-shadow: 7px 0px 7px #00bcd4;
+}
+.audio3 h3 {
+    position: relative;
+    bottom: 180px;
+    width: 725px;
+    left: 186px;
+    text-align: center;
+    font-family: 'Roboto', cursive;
+    font-size: 1.3em;
+    color: white;
+    text-shadow: 7px 0px 7px #00bcd4;
+}
+
+
+
+
+.audio1 p {
+    position: relative;
+    width: 725px;
+    height: 100px;
+    left: 176px;
+    bottom: 188px;
+    margin: 10px;
+    color: white;
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+.audio2 p {
+    position: relative;
+    width: 725px;
+    height: 100px;
+    left: 176px;
+    bottom: 188px;
+    margin: 10px;
+    color: white;
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+.audio3 p {
+    position: relative;
+    width: 700px;
+    height: 100px;
+    left: 185px;
+    bottom: 188px;
+    margin: 10px;
+    color: white;
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+
+
+.audio1 a {
+    position: relative;
+    bottom: 230px;
+    left: 130px;
+    background: #00bcd4;
+    padding: 8px 10px;
+    font-size: 1.1em;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.audio1 a:hover {
+    background: linear-gradient(45deg,#89ff00,#00bcd4);
+}
+
+
+
+.audio2 a {
+    position: relative;
+    bottom: 230px;
+    left: 130px;
+    background: #00bcd4;
+    padding: 8px 10px;
+    font-size: 1.1em;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.audio2 a:hover {
+    background: linear-gradient(45deg,#89ff00,#00bcd4);
+}
+
+
+
+
+.audio3 a {
+    position: relative;
+    bottom: 230px;
+    left: 130px;
+    background: #00bcd4;
+    padding: 8px 10px;
+    font-size: 1.1em;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.audio3 a:hover {
+    background: linear-gradient(45deg,#89ff00,#00bcd4);
+}
+
+    
+
+_______________________________________________________________________________________
+
+body.night .texto h1,
+body.night .texto p
+{
+    color: #fff;
+}
+
+
+
+
+body.night .texto-contenedor .texto {
+    background: #263143;
+}
+
+
+body.night .texto-contenedor .texto h1 {
+    box-shadow: 1px 50px 50px rgba(0,0,0,0.5);
+}
+
+body.night .texto-contenedor .texto .eres {
+    border-left: 2px solid white;
+}
+
+
+
+
+body.night .reproductor {
+    background: #263143;
+}
+
+
+body.night .reproductor .audio1 {
+    background: rgba(0,0,0,0.5);
+}
+
+body.night .reproductor .audio2 {
+    background: rgba(0,0,0,0.5);
+}
+
+body.night .reproductor .audio3 {
+    background: rgba(0,0,0,0.5);
+}
+
+
+
+
+body.night .reproductor .audio1 h3 {
+    text-shadow: none;
+    color: #00bcd4; 
+}
+body.night .reproductor .audio2 h3 {
+    text-shadow: none; 
+    color: #00bcd4;
+}
+body.night .reproductor .audio3 h3 {
+    text-shadow: none;
+    color: #00bcd4;
+}
+
+
+
+
+
